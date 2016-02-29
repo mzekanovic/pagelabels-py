@@ -23,7 +23,8 @@ $ cd pagelabels-py
 ```
 
 #### Add a new page index to the PDF
-This adds a new index, without deleting the ones that may already exist.
+This adds a new index to the file `/tmp/test.pdf`,
+without deleting the ones that may already exist.
 The new index will take effect from the 1st page of the PDF,
 will be composed of uppercase roman numerals, preceded by the string "Intro ",
 and starting from "V".
