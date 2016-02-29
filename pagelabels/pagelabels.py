@@ -15,16 +15,17 @@ class PageLabels(list):
     def normalize(self, pagenum=float("inf")):
         """Sort the pagelabels, remove duplicate entries,
         and if pegenum is set remove entries that have a startpage >= pagenum"""
+        # Remove duplicates
+        pagenums = dict()
+        for elem in self[:]:
+            oldelem = pagenums.get(elem.startpage)
+            if oldelem != None or elem.startpage >= pagenum:
+                self.remove(oldelem)
+            else:
+                pagenums[elem.startpage] = elem
         self.sort()
         if len(self) == 0 or self[0].startpage != 0:
             self.insert(0, PageLabelScheme(0))
-        # Remove duplicates
-        pagenums = set()
-        for elem in self[:]:
-            if elem.startpage in pagenums or elem.startpage >= pagenum:
-                self.remove(elem)
-            else:
-                pagenums.add(elem.startpage)
 
     def pdfdict(self):
         """Return a PageLabel entry to pe inserted in the root of a PdfReader object"""

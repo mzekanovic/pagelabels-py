@@ -27,8 +27,7 @@ class PageLabelScheme(PageLabelTuple):
                      prefix=defaults["prefix"],
                      firstpagenum=defaults["firstpagenum"]):
         if not style in styles:
-            stylenames = ("', '".join(cls.styles))
-            raise ValueError("PageLabel style must be one of '%s'" % stylenames)
+            raise ValueError("PageLabel style must be one of %s" % cls.styles())
         return super().__new__(cls, int(startpage), style, str(prefix), int(firstpagenum))
 
     @classmethod
@@ -38,6 +37,11 @@ class PageLabelScheme(PageLabelTuple):
                     style=stylecodes.get(opts.S, defaults["style"]),
                     prefix=(opts.P and opts.P.decode() or defaults["prefix"]),
                     firstpagenum=(opts.St or defaults["firstpagenum"]))
+
+    @staticmethod
+    def styles():
+        """List of the allowed styles"""
+        return styles.keys()
 
     def pdfobjs(self):
         """Returns a tuple of two elements to insert in the PageLabels.Nums
