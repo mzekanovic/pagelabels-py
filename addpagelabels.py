@@ -32,7 +32,6 @@ else:
                                prefix       = options.prefix,
                                firstpagenum = options.firstpagenum)
     labels.append(newlabel)
-    print(labels)
 # Write the new page labels to the PDF
 labels.write(reader)
 print(reader.Root.PageLabels)
