@@ -7,7 +7,7 @@ For more info about page labels, see: https://www.w3.org/TR/WCAG20-TECHS/PDF17.h
 
 ## Classes
  * [PageLabels](#PageLabels)
- * [PageLabelScheme](PageLabelScheme)
+ * [PageLabelScheme](#PageLabelScheme)
 
 ## PageLabels
 Inherits from list and represents a list of `PageLabelScheme`s.
