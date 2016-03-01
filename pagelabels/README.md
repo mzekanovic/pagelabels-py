@@ -6,8 +6,8 @@ It can parse page labels from  a PDF, edit page labels, and write them in a PDF.
 For more info about page labels, see: https://www.w3.org/TR/WCAG20-TECHS/PDF17.html
 
 ## Classes
- * [PageLabels](#PageLabels)
- * [PageLabelScheme](#PageLabelScheme)
+ * [PageLabels](#pagelabels)
+ * [PageLabelScheme](#pagelabelscheme)
 
 ## PageLabels
 Inherits from list and represents a list of `PageLabelScheme`s.
