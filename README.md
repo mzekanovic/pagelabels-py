@@ -8,7 +8,7 @@ Install **pip** if you don't have it already:
 ```bash
 $ sudo apt install python3-pip
 ```
-Install [**pdfrw*](https://github.com/pmaupin/pdfrw):
+Install [**pdfrw**](https://github.com/pmaupin/pdfrw):
 ```
 $ pip3 install pdfrw
 ```
