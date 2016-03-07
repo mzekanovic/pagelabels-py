@@ -48,7 +48,7 @@ class PageLabelScheme(PageLabelTuple):
         entry of a pdf"""
         pagenum = PdfObject(self.startpage)
         opts = PdfDict(S=styles[self.style])
-        if self.style != defaults["style"]:
+        if self.prefix != defaults["prefix"]:
             opts.P = PdfString.encode(self.prefix)
         if self.firstpagenum != defaults["firstpagenum"]:
             opts.St = PdfObject(self.firstpagenum)
