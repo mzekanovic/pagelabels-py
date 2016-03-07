@@ -34,7 +34,8 @@ else:
     labels.append(newlabel)
 # Write the new page labels to the PDF
 labels.write(reader)
-print(reader.Root.PageLabels)
+print("New labels to be written:")
+print("\n".join(map(str, labels)))
 
 writer = PdfWriter()
 writer.trailer = reader
