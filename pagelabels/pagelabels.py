@@ -5,6 +5,8 @@ from pdfrw import PdfName, PdfDict, PdfArray
 class PageLabels(list):
     @classmethod
     def from_pdf(cls, pdf):
+        """Create a PageLabels object by reading the page labels of
+        the given PdfReader object"""
         labels = pdf.Root.PageLabels
         if not labels: return cls([])
         nums = labels.Nums
