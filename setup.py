@@ -38,5 +38,5 @@ setup(
         'Topic :: Printing',
         'Topic :: Utilities',
     ],
-    keywords='PDF, page labels",
+    keywords='PDF, page labels'
 )
