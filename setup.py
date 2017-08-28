@@ -9,7 +9,7 @@ setup(
     name='pagelebels-py',
     version='0.1.0',
     description='PDF file reader/writer library',
-    long_description=read("README.rst"),
+    long_description=read("README.md"),
     author='Ophir Lojkine',
     author_email='pere.jobs@gmail.com',
     platforms='Independent',
